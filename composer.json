@@ -1,0 +1,24 @@
+{
+    "name": "stas2/htdocs",
+    "description": "cool project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "viVo4s",
+            "email": "stas22900@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "core/Src/",
+            "": "app/"
+        }
+    }
+ 
+}
