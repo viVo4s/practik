@@ -1607,7 +1607,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "illuminate/database": 20,
+        "illuminate/events": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

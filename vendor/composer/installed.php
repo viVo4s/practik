@@ -3,7 +3,7 @@
         'name' => 'stas2/htdocs',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4a79322bfffbebcf0292ef03e9ff4c4705dd9a00',
+        'reference' => 'b5b4b0fbb6f211c59586291249bcd75c82d5863b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -212,7 +212,7 @@
         'stas2/htdocs' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4a79322bfffbebcf0292ef03e9ff4c4705dd9a00',
+            'reference' => 'b5b4b0fbb6f211c59586291249bcd75c82d5863b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
