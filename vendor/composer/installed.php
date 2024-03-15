@@ -3,7 +3,7 @@
         'name' => 'stas2/htdocs',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b5b4b0fbb6f211c59586291249bcd75c82d5863b',
+        'reference' => '50a04f2034afe1e17b0cb2c125dbb09b540d2fdd',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -160,6 +160,17 @@
             ),
             'dev_requirement' => false,
         ),
+        'nikic/fast-route' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'd3ada013d0f683ad2a8d0614fc97917a6ab72ce9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/fast-route',
+            'aliases' => array(
+                0 => '2.0.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'psr/clock' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
@@ -212,7 +223,7 @@
         'stas2/htdocs' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b5b4b0fbb6f211c59586291249bcd75c82d5863b',
+            'reference' => '50a04f2034afe1e17b0cb2c125dbb09b540d2fdd',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
