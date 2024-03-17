@@ -7,6 +7,7 @@ use Src\View;
 use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
+use Model\employees;
 
 
 class Site
@@ -48,6 +49,12 @@ class Site
     {
     Auth::logout();
     app()->route->redirect('/hello');
+    }
+
+    public function employees(): string
+    {
+        $employees = employees::all();   
+        return new View('site.employees', ['employees' => $employees]);
     }
 
 }
