@@ -60,7 +60,7 @@
     </style>
 </head>
 <body>
-    <h2>Добавление данных</h2>
+    <h2>Выбрать преподователся</h2>
     <form method="post">
         <label>Имя педагогического сотрудника:</label>
         <input type="text" name="teacher_name" required><br><br>
@@ -75,7 +75,6 @@
         <select name="selected_teacher">
             <option value="teacher1">Педагогический сотрудник 1</option>
             <option value="teacher2">Педагогический сотрудник 2</option>
-            <!-- Добавьте других педагогических сотрудников в аналогичном формате -->
         </select><br><br>
 
         <input type="submit" value="Отправить">

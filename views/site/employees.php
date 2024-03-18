@@ -7,7 +7,7 @@
     <style>
         form {
             position: absolute;
-            top: 50%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #fff;
@@ -84,6 +84,9 @@
         
         <label for="department_id">ID кафедры:</label><br>
         <input type="number" id="department_id" name="department_id"><br>
+        
+        <label for="employee_id">ID сотрудника:</label><br>
+        <input type="number" id="employee_id" name="department_id"><br>
         
         <input type="submit" value="Добавить сотрудника">
     </form>

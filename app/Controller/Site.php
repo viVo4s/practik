@@ -54,7 +54,7 @@ class Site
 
     public function employees(): string
     {
-        $employees = employees::all();   
+        $employees = employees::all();  
         return new View('site.employees', ['employees' => $employees]);
     }
 
