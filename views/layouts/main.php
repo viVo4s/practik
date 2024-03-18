@@ -9,6 +9,25 @@
 </head>
 <body>
 <header>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           background-color: #f0f0f0;
+           margin: 0;
+       }
+       
+       nav {
+           background-color: #333;
+           color: white;
+           padding: 10px;
+       }
+       
+       a {
+           color: white;
+           text-decoration: none;
+           margin-right: 10px;
+       }
+   </style>
    <nav>
        <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
        <?php
