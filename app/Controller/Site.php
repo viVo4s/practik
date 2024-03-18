@@ -9,7 +9,7 @@ use Model\User;
 use Src\Auth\Auth;
 use Model\employees;
 use Model\teachers;
-
+use Model\discipline;
 
 class Site
 {
@@ -63,4 +63,11 @@ class Site
         $teachers = teachers::all();   
         return new View('site.teachers', ['teachers' => $teachers]);
     }
+
+    public function discipline(): string
+    {
+        $discipline = discipline::all();   
+        return new View('site.discipline', ['discipline' => $discipline]);
+    }
+
 }
