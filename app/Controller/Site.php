@@ -52,15 +52,24 @@ class Site
     app()->route->redirect('/hello');
     }
 
-    public function employees(): string
+    public function employees(Request $request): string
     {
-        $employees = employees::all();  
+        if ($request->method === 'POST' && Employees::create($request->all())) {
+            app()->route->redirect('/employees');
+        }
+        
+        // Предположим, что вам нужно получить список сотрудников из вашей модели Employees
+        $employees = Employees::all(); // Пример получения всех сотрудников
+        
         return new View('site.employees', ['employees' => $employees]);
     }
 
     public function teachers(): string
     {
-        $teachers = teachers::all();   
+        $teachers = teachers::all();  
+            if ($request->method === 'POST' && teachers::create($request->all())) {
+                app()->route->redirect('/teachers');
+            }
         return new View('site.teachers', ['teachers' => $teachers]);
     }
 
