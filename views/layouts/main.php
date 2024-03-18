@@ -26,6 +26,7 @@
            color: white;
            text-decoration: none;
            margin-right: 10px;
+           margin: 20px;
        }
    </style>
    <nav>
@@ -35,12 +36,12 @@
            ?>
            <a href="<?= app()->route->getUrl('/login') ?>">Вход</a>
            <a href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
-           <a href="<?= app()->route->getUrl('/teachers') ?>">Выбрать</a>           
        <?php
        else:
            ?>
            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
-           <a href="<?= app()->route->getUrl('/employees') ?>">добавление</a>           
+           <a href="<?= app()->route->getUrl('/employees') ?>">добавление сотрудников</a>  
+           <a href="<?= app()->route->getUrl('/teachers') ?>">Выбрать преподователся</a>                    
        <?php
        endif;
        ?>
