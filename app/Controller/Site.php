@@ -8,6 +8,7 @@ use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
 use Model\employees;
+use Model\teachers;
 
 
 class Site
@@ -57,4 +58,9 @@ class Site
         return new View('site.employees', ['employees' => $employees]);
     }
 
+    public function teachers(): string
+    {
+        $teachers = teachers::all();   
+        return new View('site.teachers', ['teachers' => $teachers]);
+    }
 }
