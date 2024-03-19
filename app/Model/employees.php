@@ -10,19 +10,21 @@ class employees extends Model
 {
    use HasFactory;
 
+   public $timestamps = false;
+
    protected $table = 'employees'; // Specify the table name
 
    protected $primaryKey = 'id'; // Specify the primary key field name
 
    protected $fillable = [
-       'фамилия',
-       'имя',
-       'отчество',
-       'пол',
-       'дата_рождения',
-       'адрес_прописки',
-       'должность',
-       'id_кафедры',
+       'last_name',
+       'first_name',
+       'middle_name',
+       'gender',
+       'data_of_birth',
+       'address',
+       'position',
+       'department_id',
    ];
 
    // Define the relationship between User and Кафедры

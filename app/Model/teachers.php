@@ -2,24 +2,26 @@
 
 namespace Model;
 
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Src\Auth\IdentityInterface;
 
-class teachers extends Model 
+class Teachers extends Model 
 {
+    protected $fillable = ['teacher_name']; // Добавляем 'teacher_name' как заполняемый атрибут
+
     public function addTeacher(Request $request)
     {
-        // Предполагается, что у вас есть соответствующая форма или данные для добавления нового педагогического сотрудника
         $teacherData = $request->all();
         
-        // Создание нового педагогического сотрудника
         $teacher = Teacher::create($teacherData);
 
         return response()->json(['message' => 'New teacher added successfully', 'data' => $teacher]);
     }
 
-    public function addDepartment(Request $request)
+    // Другие методы класса
+
+       public function addDepartment(Request $request)
     {
         // Предполагается, что у вас есть соответствующая форма или данные для добавления новой кафедры
         $departmentData = $request->all();

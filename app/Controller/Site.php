@@ -64,12 +64,14 @@ class Site
         return new View('site.employees', ['employees' => $employees]);
     }
 
-    public function teachers(): string
+    public function teachers(Request $request): string
     {
-        $teachers = teachers::all();  
-            if ($request->method === 'POST' && teachers::create($request->all())) {
-                app()->route->redirect('/teachers');
-            }
+        $teachers = teachers::all();
+        
+        if ($request->method === 'POST' && teachers::create($request->all())) {
+            app()->route->redirect('/teachers');
+        }
+        
         return new View('site.teachers', ['teachers' => $teachers]);
     }
 

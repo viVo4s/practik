@@ -84,10 +84,7 @@
         
         <label for="department_id">ID кафедры:</label><br>
         <input type="number" id="department_id" name="department_id"><br>
-        
-        <label for="employee_id">ID сотрудника:</label><br>
-        <input type="number" id="employee_id" name="employee_id"><br>
-        
+                
         <input type="submit" value="Добавить сотрудника">
     </form>
 </body>
