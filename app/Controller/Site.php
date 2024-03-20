@@ -9,6 +9,8 @@ use Model\User;
 use Src\Auth\Auth;
 use Model\employees;
 use Model\discipline;
+use Model\attach;
+
 
 class Site
 {
@@ -47,8 +49,8 @@ class Site
 
     public function logout(): void
     {
-    Auth::logout();
-    app()->route->redirect('/hello');
+        Auth::logout();
+        app()->route->redirect('/hello');
     }
 
     public function employees(Request $request): string
@@ -69,10 +71,10 @@ class Site
         return new View('site.discipline', ['discipline' => $discipline]);
     }
 
-    public function attach(): string
+    public function attaches(): string
     {
         $disciplines = Discipline::all();
         return new View('site.attach', ['disciplines' => $disciplines]);
     }
-
+    
 }
