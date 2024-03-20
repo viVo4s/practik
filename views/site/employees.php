@@ -74,7 +74,7 @@
         <input type="text" id="gender" name="gender"><br>
         
         <label for="dob">Дата рождения:</label><br>
-        <input type="date" id="dob" name="dob"><br>
+        <input type="date" id="date_of_birth" name="date_of_birth"><br>
         
         <label for="address">Адрес прописки:</label><br>
         <input type="text" id="address" name="address"><br>

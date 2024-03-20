@@ -40,9 +40,9 @@
        else:
            ?>
            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
-           <a href="<?= app()->route->getUrl('/employees') ?>">добавление сотрудников</a>  
-           <!-- <a href="<?= app()->route->getUrl('/teachers') ?>">Выбрать преподователся</a>    -->
-           <a href="<?= app()->route->getUrl('/discipline') ?>">выбор сотрудника по кафедре</a>                                     
+           <a href="<?= app()->route->getUrl('/employees') ?>">добавление сотрудников</a>
+           <a href="<?= app()->route->getUrl('/discipline') ?>">выбор сотрудника по кафедре</a>   
+           <a href="<?= app()->route->getUrl('/attach') ?>">Прикрепление</a>     
        <?php
        endif;
        ?>

@@ -6,21 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Src\Auth\IdentityInterface;
 
-class discipline extends Model 
+class Discipline extends Model 
 {
     use HasFactory;
 
-    protected $table = 'employees'; // Указываем название таблицы базы данных
+    protected $table = 'disciplines'; // Изменено на название таблицы с дисциплинами
 
-    protected $primaryKey = 'id'; // Указываем название первичного ключа
+    protected $primaryKey = 'discipline_id'; // Изменено на название первичного ключа
 
-    protected $fillable = ['name']; // Указываем заполняемые поля
+    protected $fillable = ['discipline_name']; // Изменено на название поля с именем дисциплины
 
-    // Определяем обратное отношение с моделью "Employee"
-    public function employees()
+    // Определяем обратное отношение с моделью "Teacher" (или другое подходящее название)
+    public function teachers()
     {
-        return $this->hasMany(Employee::class, 'id_кафедры', 'id');
+        return $this->hasMany(Teacher::class, 'discipline_id', 'discipline_id');
     }
 }
-
-

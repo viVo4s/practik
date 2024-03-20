@@ -21,7 +21,7 @@ class employees extends Model
        'first_name',
        'middle_name',
        'gender',
-       'data_of_birth',
+       'date_of_birth',
        'address',
        'position',
        'department_id',

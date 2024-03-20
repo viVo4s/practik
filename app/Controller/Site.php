@@ -8,7 +8,6 @@ use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
 use Model\employees;
-use Model\teachers;
 use Model\discipline;
 
 class Site
@@ -64,21 +63,16 @@ class Site
         return new View('site.employees', ['employees' => $employees]);
     }
 
-    public function teachers(Request $request): string
-    {
-        $teachers = teachers::all();
-        
-        if ($request->method === 'POST' && teachers::create($request->all())) {
-            app()->route->redirect('/teachers');
-        }
-        
-        return new View('site.teachers', ['teachers' => $teachers]);
-    }
-
     public function discipline(): string
     {
         $discipline = discipline::all();   
         return new View('site.discipline', ['discipline' => $discipline]);
+    }
+
+    public function attach(): string
+    {
+        $disciplines = Discipline::all();
+        return new View('site.attach', ['disciplines' => $disciplines]);
     }
 
 }
