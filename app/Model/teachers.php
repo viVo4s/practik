@@ -5,29 +5,23 @@ namespace Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DeanStaff extends Model
+class teachers extends Model
 {
-    use HasFactory;
-
-    protected $table = 'dean_staff'; // Имя таблицы в базе данных
-
-    protected $fillable = ['name', 'position']; // Заполняемые поля модели
-
-    // Определяем отношение "один ко многим" с моделью PedagogicalStaff
+    protected $table = 'teachers'; // Имя таблицы в базе данных 
+    protected $fillable = ['name', 'position']; // Заполняемые поля модели  
+    // Определяем отношение "один к одному" с моделью PedagogicalStaff
     public function pedagogicalStaff()
     {
-        return $this->hasMany(PedagogicalStaff::class);
-    }
-
-    // Определяем отношение "один ко многим" с моделью Department
-    public function departments()
+        return $this->hasOne(PedagogicalStaff::class, 'teacher_id');
+    }   
+    // Определяем отношение "один к одному" с моделью Department
+    public function department()
     {
-        return $this->hasMany(Department::class);
-    }
-
+        return $this->hasOne(Department::class, 'teacher_id');
+    }   
     // Определяем отношение "многие ко многим" с моделью Discipline через промежуточную таблицу attaches
     public function disciplines()
     {
-        return $this->belongsToMany(Discipline::class, 'attaches', 'dean_staff_id', 'discipline_id');
+        return $this->belongsToMany(Discipline::class, 'employee_id', 'department_id', 'discipline_id');
     }
 }

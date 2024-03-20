@@ -77,4 +77,9 @@ class Site
         return new View('site.attach', ['disciplines' => $disciplines]);
     }
     
+    public function teachers(): string
+    {
+        $disciplines = Discipline::all();
+        return new View('site.teachers', ['disciplines' => $disciplines]);
+    }
 }
