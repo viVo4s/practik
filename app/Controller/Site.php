@@ -10,7 +10,7 @@ use Src\Auth\Auth;
 use Model\employees;
 use Model\discipline;
 use Model\attach;
-
+use Model\Readable;
 
 class Site
 {
@@ -82,4 +82,12 @@ class Site
         $disciplines = Discipline::all();
         return new View('site.teachers', ['disciplines' => $disciplines]);
     }
+
+    public function readable(): string
+    {
+        $readable = readable::all();
+        return new View('site.readable', ['disciplines' => $readable]);
+    }
+    
+    
 }

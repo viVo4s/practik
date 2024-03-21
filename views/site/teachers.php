@@ -64,21 +64,26 @@
 
     <!-- Форма для добавления педагогических сотрудников -->
     <form method="POST">
-        <label for="pedagogical_staff_name">Имя преподователя:</label>
+        <label for="pedagogical_staff_name">ФИО преподователя:</label>
         <input type="text" id="pedagogical_staff_name" name="pedagogical_staff_name">
+        <input type="text" id="pedagogical_staff_name" name="pedagogical_staff_name">
+        <input type="text" id="pedagogical_staff_name" name="pedagogical_staff_name">   
         <button type="submit">Добавить</button>
     </form>
 
     <!-- Форма для добавления кафедр -->
     <form method="POST">
-        <label for="department_name">Название кафедры:</label>
-        <input type="text" id="department_name" name="department_name">
-        <button type="submit">Добавить</button>
-    </form>
+    <label for="department_id">ID кафедры:</label>
+    <input type="text" id="department_id" name="department_id">
+    <label for="department_name">Название кафедры:</label>
+    <input type="text" id="department_name" name="department_name">
+    <button type="submit">Добавить</button>
+</form>
+
 
     <!-- Форма для добавления дисциплин -->
     <form method="POST">
-        <label for="discipline_name">Название дисциплины:</label>
+        <label for="discipline_id">Название дисциплины:</label>
         <input type="text" id="discipline_name" name="discipline_name">
         <button type="submit">Добавить</button>
     </form>

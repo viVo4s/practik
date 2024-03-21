@@ -42,8 +42,9 @@
 
         <?php else: ?>
             <a href="<?= app()->route->getUrl('/discipline') ?>">Выбор сотрудника по кафедре</a>
-            <a href="<?= app()->route->getUrl('/attach') ?>">Прикрепление</a>
             <a href="<?= app()->route->getUrl('/teachers') ?>">добавления</a>
+            <a href="<?= app()->route->getUrl('/attach') ?>">Прикрепление</a>
+            <a href="<?= app()->route->getUrl('/readable') ?>">выбрать дисциплины</a>
         <?php endif; ?>
     <?php endif; ?>
 </nav>
