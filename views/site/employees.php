@@ -5,17 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма для добавления сотрудника</title>
     <style>
-        form {
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
@@ -25,24 +14,29 @@
             align-items: center;
             height: 100vh;
         }
-    
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto; /* Центрирование по горизонтали */
+        }
+
         h1 {
             text-align: center;
             margin-bottom: 20px;
         }
-        
         label {
             font-weight: bold;
         }
-        
-        input {
-            width: 100%;
+        input, select {
+            width: calc(100% - 10px);
             padding: 5px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-        
         input[type="submit"] {
             background-color: #007bff;
             color: #fff;
@@ -50,9 +44,7 @@
             padding: 10px 15px;
             border-radius: 3px;
             cursor: pointer;
-            width: 100%;
         }
-        
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
@@ -82,8 +74,14 @@
         <label for="position">Должность:</label><br>
         <input type="text" id="position" name="position"><br>
         
-        <label for="department_id">ID кафедры:</label><br>
-        <input type="number" id="department_id" name="department_id"><br>
+        <label for="department_id">Выберите кафедру:</label><br>
+        <select id="department_id" name="department_id">
+            <option value="1">Кафедра 1</option>
+            <option value="2">Кафедра 2</option>
+            <option value="3">Кафедра 3</option>
+            <!-- Добавляем новые кафедры здесь: -->
+            <option value="4">Кафедра 4</option>
+        </select><br>
                 
         <input type="submit" value="Добавить сотрудника">
     </form>
