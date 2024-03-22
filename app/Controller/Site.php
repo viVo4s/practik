@@ -11,6 +11,7 @@ use Model\employees;
 use Model\discipline;
 use Model\attach;
 use Model\Readable;
+use Src\Validator\Validator;
 
 class Site
 {
@@ -26,12 +27,30 @@ class Site
    }
    
    public function signup(Request $request): string
-    {
-    if ($request->method === 'POST' && User::create($request->all())) {
-        app()->route->redirect('/hello');
-    }
-    return new View('site.signup');
-    }
+   {
+      if ($request->method === 'POST') {
+   
+          $validator = new Validator($request->all(), [
+              'name' => ['required'],
+              'login' => ['required', 'unique:users,login'],
+              'password' => ['required']
+          ], [
+              'required' => 'Поле :field пусто',
+              'unique' => 'Поле :field должно быть уникально'
+          ]);
+   
+          if($validator->fails()){
+              return new View('site.signup',
+                  ['message' => json_encode($validator->errors(), JSON_UNESCAPED_UNICODE)]);
+          }
+   
+          if (User::create($request->all())) {
+              app()->route->redirect('/login');
+          }
+      }
+      return new View('site.signup');
+   }
+   
 
     public function login(Request $request): string
     {
@@ -59,8 +78,7 @@ class Site
             app()->route->redirect('/employees');
         }
         
-        // Предположим, что вам нужно получить список сотрудников из вашей модели Employees
-        $employees = Employees::all(); // Пример получения всех сотрудников
+        $employees = Employees::all(); 
         
         return new View('site.employees', ['employees' => $employees]);
     }

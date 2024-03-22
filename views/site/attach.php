@@ -52,7 +52,7 @@
 </head>
 <body>
     <h1>Прикрепление сотрудников к дисциплинам</h1>
-    <form action="attach.php" method="POST">
+    <form method="POST">
         <label for="discipline_id">Выберите дисциплину:</label>
         <select name="discipline_id" id="discipline_id">
             <!-- Ваши варианты выбора дисциплин -->
