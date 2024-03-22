@@ -15,6 +15,7 @@ class Request
        $this->body = $_REQUEST;
        $this->method = $_SERVER['REQUEST_METHOD'];
        $this->headers = getallheaders() ?? [];
+       
    }
 
    public function all(): array
