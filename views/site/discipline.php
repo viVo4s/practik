@@ -10,6 +10,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
+            background-color: #f4f4f4; /* Добавляем цвет фона */
         }
 
         h1 {
@@ -19,7 +20,11 @@
 
         form {
             max-width: 400px;
-            margin: 0 auto;
+            margin: 10px auto;
+            background-color: #fff; /* Добавляем цвет фона */
+            padding: 20px; /* Добавляем отступы */
+            border-radius: 10px; /* Добавляем закругленные углы */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
         }
 
         label {
@@ -34,15 +39,18 @@
             margin-bottom: 20px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            box-sizing: border-box; /* Добавляем box-sizing для корректного размера */
         }
 
         button {
-            padding: 10px 20px;
+            width: 100%; /* Делаем кнопку на всю ширину формы */
+            padding: 10px;
             background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s; /* Добавляем плавное изменение цвета при наведении */
         }
 
         button:hover {
@@ -58,9 +66,17 @@
         <label for="department">Добавить новую кафедру:</label>
         <input type="text" name="new_department" placeholder="Название кафедры" required>
 
+        <button type="submit" name="add_department">Добавить кафедру</button>
+    </form>
+
+    <form method="post">
         <label for="course">Добавить новую дисциплину:</label>
         <input type="text" name="new_course" placeholder="Название дисциплины" required>
 
+        <button type="submit" name="add_course">Добавить дисциплину</button>
+    </form>
+
+    <form method="post">
         <label for="employee">Добавить нового сотрудника:</label>
         <input type="text" name="new_employee" placeholder="Имя сотрудника" required>
 
@@ -73,7 +89,7 @@
             <option value="4">Course 4</option>
         </select>
 
-        <button type="submit">Добавить</button>
+        <button type="submit" name="add_employee">Добавить сотрудника</button>
     </form>
 
 </body>

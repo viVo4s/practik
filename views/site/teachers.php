@@ -73,8 +73,6 @@
 
     <!-- Форма для добавления кафедр -->
     <form method="POST">
-    <label for="department_id">ID кафедры:</label>
-    <input type="text" id="department_id" name="department_id">
     <label for="department_name">Название кафедры:</label>
     <input type="text" id="department_name" name="department_name">
     <button type="submit">Добавить</button>

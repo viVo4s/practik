@@ -41,7 +41,7 @@
             <a href="<?= app()->route->getUrl('/employees') ?>">Добавление сотрудников</a>
 
         <?php else: ?>
-            <a href="<?= app()->route->getUrl('/discipline') ?>">Выбор сотрудника по кафедре</a>
+            <a href="<?= app()->route->getUrl('/discipline') ?>">Добавить сотрудников и дисциплины</a>
             <a href="<?= app()->route->getUrl('/teachers') ?>">добавления</a>
             <a href="<?= app()->route->getUrl('/attach') ?>">Прикрепление</a>
             <a href="<?= app()->route->getUrl('/readable') ?>">выбрать дисциплины</a>

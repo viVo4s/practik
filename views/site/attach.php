@@ -53,17 +53,30 @@
 <body>
     <h1>Прикрепление сотрудников к дисциплинам</h1>
     <form method="POST">
-        <label for="discipline_id">Выберите дисциплину:</label>
-        <select name="discipline_id" id="discipline_id">
-            <!-- Ваши варианты выбора дисциплин -->
-        </select>
+        <details>
+            <summary>Выберите дисциплину</summary>
+            <select name="discipline_id" id="discipline_id">
+                <option value="1">Course 1</option>
+                <option value="2">Course 2</option>
+                <option value="3">Course 3</option>
+                <!-- Добавляем новые дисциплины здесь: -->
+                <option value="4">Course 4</option>
+            </select>
+        </details>
         <br><br>
-        <label for="employee_id">Выберите сотрудника:</label>
-        <select name="employee_id" id="employee_id">
-            <!-- Ваши варианты выбора сотрудников -->
-        </select>
+        <details>
+            <summary>Выберите сотрудника</summary>
+            <select name="employee_id" id="employee_id">
+                <option value="1">Employee 1</option>
+                <option value="2">Employee 2</option>
+                <option value="3">Employee 3</option>
+                <!-- Добавляем новых сотрудников здесь: -->
+                <option value="4">Employee 4</option>
+            </select>
+        </details>
         <br><br>
         <button type="submit">Прикрепить</button>
     </form>
 </body>
+
 </html>
