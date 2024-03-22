@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class teachers extends Model
 {
     protected $table = 'teachers'; // Имя таблицы в базе данных 
-    protected $fillable = ['name', 'position']; // Заполняемые поля модели  
+    protected $fillable = ['name']; // Заполняемые поля модели  
     // Определяем отношение "один к одному" с моделью PedagogicalStaff
     public function pedagogicalStaff()
     {

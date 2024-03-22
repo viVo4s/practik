@@ -53,11 +53,12 @@
 <body>
     <h1>Выбор дисциплин</h1>
     <form method="post">
-        <label for="department_id">Выберите кафедру:</label>
-        <select id="department_id" name="department_id">
+    <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
+        <label for="discipline_id">Выберите кафедру:</label>
+        <select id="discipline_id" name=" ">
             <option value="">Все кафедры</option>
-            <?php foreach ($departments as $department): ?>
-                <option value="<?= $department->id ?>"><?= $department->name ?></option>
+            <?php foreach ($discipline as $disc): ?>
+                <option value="<?= $disc->id ?>"><?= $disc->name ?></option>
             <?php endforeach; ?>
         </select>
         <button type="submit">Показать</button>
@@ -65,9 +66,13 @@
 
     <h2>Дисциплины</h2>
     <ul>
-        <?php foreach ($disciplines as $discipline): ?>
-            <li><?= $discipline->name ?></li>
-        <?php endforeach; ?>
+        <?php if (!empty($disciplines)): ?>
+            <?php foreach ($disciplines as $disc): ?>
+                <li><?= $disc->name ?></li>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <li>Дисциплины не найдены</li>
+        <?php endif; ?>
     </ul>
 </body>
 </html>

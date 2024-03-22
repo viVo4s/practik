@@ -64,15 +64,17 @@
 
     <!-- Форма для добавления педагогических сотрудников -->
     <form method="POST">
+    <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
         <label for="pedagogical_staff_name">ФИО преподователя:</label>
-        <input type="text" id="pedagogical_staff_name" name="pedagogical_staff_name">
-        <input type="text" id="pedagogical_staff_name" name="pedagogical_staff_name">
-        <input type="text" id="pedagogical_staff_name" name="pedagogical_staff_name">   
+        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name">   
         <button type="submit">Добавить</button>
     </form>
 
     <!-- Форма для добавления кафедр -->
     <form method="POST">
+    <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
     <label for="department_name">Название кафедры:</label>
     <input type="text" id="department_name" name="department_name">
     <button type="submit">Добавить</button>
@@ -81,6 +83,7 @@
 
     <!-- Форма для добавления дисциплин -->
     <form method="POST">
+    <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
         <label for="discipline_id">Название дисциплины:</label>
         <input type="text" id="discipline_name" name="discipline_name">
         <button type="submit">Добавить</button>
